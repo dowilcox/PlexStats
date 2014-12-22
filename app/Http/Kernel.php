@@ -24,9 +24,6 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth' => 'PlexStats\Http\Middleware\Authenticate',
-		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'PlexStats\Http\Middleware\RedirectIfAuthenticated',
 	];
 
 }
