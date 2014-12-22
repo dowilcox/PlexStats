@@ -31,7 +31,7 @@
 @text-color:            #fff;
 
 //** Global textual link color.
-@link-color:            desaturate(lighten(@brand-success, 10%),10%);
+@link-color:            desaturate(lighten(@brand-primary, 10%),10%);
 //** Link hover color set via `darken()` function.
 @link-hover-color:      @link-color;
 //** Link hover decoration.
@@ -109,7 +109,7 @@
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
-@component-active-bg:       @brand-success;
+@component-active-bg:       @brand-primary;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 @caret-width-base:          4px;
@@ -360,7 +360,7 @@
 
 // Navbar links
 @navbar-default-link-color:                #fff;
-@navbar-default-link-hover-color:          @brand-success;
+@navbar-default-link-hover-color:          @gray-darker;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #fff;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
@@ -421,7 +421,7 @@
 @nav-tabs-link-hover-border-color:          @gray;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @brand-success;
+@nav-tabs-active-link-hover-color:          @brand-primary;
 @nav-tabs-active-link-hover-border-color:   @nav-tabs-link-hover-border-color;
 
 @nav-tabs-justified-link-border-color:            @gray-lighter;
@@ -438,19 +438,19 @@
 //##
 
 @pagination-color:                     #fff;
-@pagination-bg:                        @brand-success;
+@pagination-bg:                        @brand-primary;
 @pagination-border:                    transparent;
 
 @pagination-hover-color:               #fff;
-@pagination-hover-bg:                  lighten(@brand-success, 6%);
+@pagination-hover-bg:                  lighten(@brand-primary, 6%);
 @pagination-hover-border:              transparent;
 
 @pagination-active-color:              #fff;
-@pagination-active-bg:                 lighten(@brand-success, 6%);
+@pagination-active-bg:                 lighten(@brand-primary, 6%);
 @pagination-active-border:             transparent;
 
 @pagination-disabled-color:            #fff;
-@pagination-disabled-bg:               darken(@brand-success, 15%);
+@pagination-disabled-bg:               darken(@brand-primary, 15%);
 @pagination-disabled-border:           transparent;
 
 
