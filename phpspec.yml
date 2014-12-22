@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: PlexStats
+        psr4_prefix: PlexStats
+        src_path: app
