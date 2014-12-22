@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'plexWatch',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -46,41 +46,10 @@ return [
 
 	'connections' => [
 
-		'sqlite' => [
+		'plexWatch' => [
 			'driver'   => 'sqlite',
-			'database' => storage_path().'/database.sqlite',
-			'prefix'   => '',
-		],
-
-		'mysql' => [
-			'driver'    => 'mysql',
-			'host'      => env('DB_HOST') ?: 'localhost',
-			'database'  => env('DB_DATABASE') ?: 'forge',
-			'username'  => env('DB_USERNAME') ?: 'forge',
-			'password'  => env('DB_PASSWORD') ?: '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		],
-
-		'pgsql' => [
-			'driver'   => 'pgsql',
-			'host'      => env('DB_HOST') ?: 'localhost',
-			'database'  => env('DB_DATABASE') ?: 'forge',
-			'username'  => env('DB_USERNAME') ?: 'forge',
-			'password'  => env('DB_PASSWORD') ?: '',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		],
-
-		'sqlsrv' => [
-			'driver'   => 'sqlsrv',
-			'host'      => env('DB_HOST') ?: 'localhost',
-			'database'  => env('DB_DATABASE') ?: 'forge',
-			'username'  => env('DB_USERNAME') ?: 'forge',
-			'password'  => env('DB_PASSWORD') ?: '',
-			'prefix'   => '',
+			'database' => env('PLEXWATCH_DB') ?: '/opt/plexWatch/plexWatch.db',
+			'prefix'   => env('PLEXWATCH_DB_PREFIX') ?: '',
 		],
 
 	],
