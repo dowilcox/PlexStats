@@ -1,7 +1,7 @@
 <?php 
 namespace PlexStats\Http\Controllers;
 
-class HomeController extends Controller {
+class TopController extends Controller {
 
 	/**
 	 * Create a new controller instance.
@@ -9,17 +9,15 @@ class HomeController extends Controller {
 	 * @return void
 	 */
 	public function __construct() {
-
 	}
 
 	/**
-	 * Show the application dashboard to the user.
+	 * Show the application welcome screen to the user.
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		return view('home');
+	public function index() {
+		return view('welcome');
 	}
 
 }
