@@ -1,6 +1,8 @@
 <?php 
 namespace PlexStats\Http\Controllers;
 
+use PlexStats\History;
+
 class UsersController extends Controller {
 
 	/**
@@ -17,7 +19,19 @@ class UsersController extends Controller {
 	 * @return Response
 	 */
 	public function index() {
-		return view('welcome');
+		$users = History::groupBy('user')->orderBy('user', 'asc')->get();
+
+		return view('users.index', [
+			'users' => $users
+		]);
+	}
+
+	public function view($username) {
+		$history = History::where('user', '=', $username)->orderBy('id', 'desc')->get();
+
+		return view('users.view', [
+			'history' => $history
+		]);
 	}
 
 }

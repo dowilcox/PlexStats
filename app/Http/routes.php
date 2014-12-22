@@ -13,7 +13,13 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+// History
+Route::get('history', 'HistoryController@index');
+Route::get('history/{id}', 'HistoryController@view')->where(['id' => '[0-9]+']);
+
+// Users
+Route::get('users', 'UsersController@index');
+Route::get('users/{useranem}', 'UsersController@view');
 
 /*
 |--------------------------------------------------------------------------
