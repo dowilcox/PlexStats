@@ -18,13 +18,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Plex Stats</a>
+          <a class="navbar-brand" href="{{ url('/') }}">Plex Stats</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">History</a></li>
-            <li><a href="#about">Users</a></li>
-            <li><a href="#contact">Top Charts</a></li>
+            <li>
+              <a href="{{ url('history') }}">History</a>
+            </li>
+            <li>
+              <a href="{{ url('users') }}">Users</a>
+            </li>
+            <li>
+              <a href="{{ url('top') }}">Top Charts</a>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
