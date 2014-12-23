@@ -11,27 +11,15 @@
 |
 */
 
+// Patterns
+Route::pattern('id', '[0-9]+');
+
 Route::get('/', 'WelcomeController@index');
 
 // History
 Route::get('history', 'HistoryController@index');
-Route::get('history/{id}', 'HistoryController@view')->where(['id' => '[0-9]+']);
+Route::get('history/{id}', 'HistoryController@view');
 
 // Users
 Route::get('users', 'UsersController@index');
-Route::get('users/{useranem}', 'UsersController@view');
-
-/*
-|--------------------------------------------------------------------------
-| Authentication & Password Reset Controllers
-|--------------------------------------------------------------------------
-|
-| These two controllers handle the authentication of the users of your
-| application, as well as the functions necessary for resetting the
-| passwords for your users. You may modify or remove these files.
-|
-*/
-
-Route::controllers([
-
-]);
+Route::get('users/{username}', 'UsersController@view');
